@@ -81,7 +81,7 @@ const loading = ref(false)
 
 // watch agit directement sur une ref
 watch(question, async (newQuestion, oldQuestion) => {
-  if (newQuestion.indexOf('?')) {
+  if (newQuestion.includes('?')) {
     loading.value = true
     answer.value = 'Thinking...'
     try {
